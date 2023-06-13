@@ -1,15 +1,17 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.printf("Hello and welcome!");
-        Account persona = new Account();
+        // Conductor del uber
+        Account conductorUber = new Account(
+                "yeyo san",
+                "dibot55@gmail.com",
+                "fino",
+                "oiezi");
+        conductorUber.id=1;
 
-        // Asignar datos a los atributos
-        persona.id= 12321;
-        persona.name="dibot55";
-        persona.email="dibot55@gmail.com";
-        persona.document="fino";
-        persona.password="oiezi";
+        //conductorUber.printDataAccount();
 
-        System.out.println(persona.name);
+        // Carro de uber
+        Car carrito = new Car(conductorUber, "mit", 2);
+        carrito.printData();
     }
 }
