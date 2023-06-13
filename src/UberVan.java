@@ -11,12 +11,20 @@ public class UberVan extends Car{
             // Atributos heredados
             Account driver,
             String licence,
-            int passegenger,
-            Map<String, Map<String, Integer>> typeCarAcepted,
-            ArrayList<String> seatsMAterial
+            int passegenger
+            //Map<String, Map<String, Integer>> typeCarAcepted,
+            //ArrayList<String> seatsMAterial
     ){
         super(driver, licence, passegenger);
-        this.typeCarAcepted = typeCarAcepted;
-        this.seatsMAterial=seatsMAterial;
+    }
+
+    // Polimorfismo
+    @Override
+    public void setPassegenger(int value) {
+        if (getPassegenger() >= 6){
+            System.out.println("Solo hay capacidad para 6 pasajeros");
+        } else {
+            super.setPassegenger(value);
+        }
     }
 }

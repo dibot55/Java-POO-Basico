@@ -19,4 +19,11 @@ public class UberX extends Car{
         this.model=model;
     }
 
+    // Otro tipo de Polimorfismo
+    @Override
+    public void printData() {
+        super.printData();
+        System.out.println(brand);
+        System.out.println(model);
+    }
 }
